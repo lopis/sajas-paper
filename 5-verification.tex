@@ -11,7 +11,7 @@ The diagram in Figure \ref{fig:CNetExample} illustrates the contract net created
 Supplier agents have a maximum supply capacity and a price for each product. After receiving a CFP, the supplier will send to the buyer a PROPOSAL containing a price for each product if the demanded supply is within the seller's capacity. Otherwise, a REFUSE message will be sent to the buyer.
 Finally, the buyer agent will compare all valid proposals, choose the cheapest offer for each individual product and reply with an ACCEPT PROPOSAL to the best offers, and REJECT PROPOSAL to all others.
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=3.0in]{figures/CNetExample.pdf}
 	\caption{
@@ -20,7 +20,7 @@ Finally, the buyer agent will compare all valid proposals, choose the cheapest o
 	\label{fig:CNetExample}
 \end{figure}
 
-Using a large data set with values for prices and supply capacity in both frameworks, we ensured the proper comparison of results. For demonstration purposes, we focused on two simple metrics to evaluate our work: time and  outcome. We have run the same experiment with varying numbers of suppliers (as sugested by Figure \ref{fig:performance}) and performed multiple repetitions of each setup.
+Using the same data set with values for prices and supply capacity in both frameworks, we ensured the proper comparison of results. For demonstration purposes, we focused on two simple metrics to evaluate our work: time and outcome. We have run the same experiment with varying numbers of suppliers (as sugested by Figure \ref{fig:performance}) and performed multiple repetitions of each setup.
 
 Time was measured from be begining of the protocol, until all suppliers were notified. The JADE implementation was tested in two different setups: first, with all agents running in a single container; second, with the supplier agents in one container and the buyer in a separate one (but in the same host). In this configuration, all communication between agents happens across containers. All tests were performed using an Intel i7 CPU with 8 logical cores at 2.20 GHz. The second validation metric we used was the actual result of the protocol, i.e who were the supplier agents chosen by the buyer and their price proposals.
 
@@ -34,7 +34,7 @@ Regarding the outcome of the protocol, as expected the same values were obtained
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%% The Chart %%%%%%%%%%%%%%%%%%
 
-\begin{figure}[h]
+\begin{figure}
 	\label{fig:performance}
 	\centering
 	%\includegraphics[width=\linewidth]{figures/performance.png}

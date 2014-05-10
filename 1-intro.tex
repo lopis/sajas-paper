@@ -12,7 +12,7 @@ The specifications of \gls{FIPA}\footnote{http://fipa.org/} promote interoperabi
 These standards define not only a common \gls{ACL}, but also a group of interaction protocols, recommended facilities for agent management and directory services \cite{o1998fipa}.
 
 % 3 - Framework problems (not supporting FIPA)
-Several frameworks exist \cite{survey} that offer some level of abstraction from low level development, allowing programmers to focus on a more conceptual approach in \gls{MAS} design.
+Several frameworks exist \cite{survey,survey2} that offer some level of abstraction from low level development, allowing programmers to focus on a more conceptual approach in \gls{MAS} design.
 % They are usually focused in one or more domains.
 It turns out, though, that \gls{FIPA} standards (or any standards) are not supported by all of them.
 
@@ -25,7 +25,7 @@ It seamlessly hides all complexity concerning its distributed architecture \cite
 However, experiments with \gls{JADE} show that the platform's scalability is limited \cite{mengistu2008scalability}, meaning that \gls{JADE} is not an appropriate tool to create MABS which usually deal with a large number of agents.
 
 % 4.2 - Repast
-Repast, on the other hand, is a toolkit focused in the creation and execution of \gls{MABS}. It is a very rich simulation tool \cite{repSimph}, but does not support any open standards. Table \ref{tab:jadevsrep} summarizes the main differences between the two frameworks. One of the main motivations for the solution we propose is to enable Repast-based \gls{FIPA}-compliant simulations to be created, thus making them more similar to distributed MAS implementations. This solution can be useful in scenarios where proficient JADE developers intend to create Repast simulations, allowing them to use familiar JADE-like tools. 
+Repast, on the other hand, is a very rich simulation tool \cite{repSimph}, but does not support any open standards. Table \ref{tab:jadevsrep} summarizes the main differences between the two frameworks. One of the main motivations of the solution we propose is to enable Repast-based \gls{FIPA}-compliant simulations, thus making them more similar to distributed MAS implementations. This solution can be useful in scenarios where proficient JADE developers intend to create Repast simulations, allowing them to use familiar JADE-like tools. 
 With this goal in mind, we wish to enable the conversion of Repast models into full featured \gls{JADE} MAS, as well as the conversion of \gls{JADE} MAS into Repast simulations, thus further closing the gap between the two frameworks.
 
 \begin{table}[h]
@@ -64,7 +64,8 @@ With these goals in mind, we propose the use of an API when developing Repast-ba
 We are aware that this kind of facilities is only valuable for true multi-agent based simulation, and not in general for any agent-based modelling and simulation approach (for which Repast is also suited).
 
 % 6 - Challenges
-Some of the challenges of developing this software lie in balancing its complexity.
+Developing \apiname{} presented some challenges.
+%Some of the challenges of developing this software lie in balancing its complexity.
 MABS's execution is usually very fast paced; maintaining a simple architecture with a low impact on performance is therefore important.
 The architecture we propose, however, is based on \gls{JADE}.
 A compromise has been met by porting the features from \gls{JADE} that we find most valuable in a \gls{MAS} and that are needed for a meaningful exploitation of both frameworks.

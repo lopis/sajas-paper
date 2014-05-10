@@ -4,7 +4,7 @@
 
 %% Intro to the proposal
 % Framework limitations issues
-The modelling of agent-based systems can be accomplished using one of the wide number of available platforms \cite{survey,survey2}. In order to benefit from different features, modelling the same MAS in different tools may be necessary.
+The modelling of agent-based systems can be accomplished using one of the wide number of available platforms. In order to benefit from different features, modelling the same MAS in different tools may be necessary.
 % The main goal of this proposal
 The API we propose is the direct result of an undergoing project to solve such need. More specifically, we propose a way to easily create JADE-like simulations based solely on the Repast Symphony platform.
 
@@ -50,7 +50,7 @@ Figures \ref{fig:com-example-jade} and \ref{fig:com-example-repast} represent a 
 	\label{fig:com-example-jade}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=3.8in]{figures/tickExample.pdf}
 	\caption{
@@ -73,7 +73,7 @@ To follow JADE-like communication, ACL Messages carry agent identifiers (AID) fo
 
 The ``plug-in points'' of the API are the Agent, the Behaviour and their derived classes. The API also supports direct access to the DFService. In Figure \ref{fig:arch} all protocol definitions are implied by the generic sub-classes ``ProtocolInitiator'' and ``ProtocolResponder''. 
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{figures/repacl_arch.pdf}
 	\caption{Detailed architecture of \apiname{}}
