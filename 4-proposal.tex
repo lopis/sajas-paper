@@ -21,7 +21,7 @@ In this section we describe \apiname{}'s architecture thoroughly, while comparin
 % Brief intro
 As previously mentioned, \apiname{} closely follows JADE's architecture.
 % The DF Agent Description in the api
-Our API implements the DF Agent Description used to filter DF searches. The focus of our tool is the development of local simulations (as opposed to distributed). As such, a single DF exists in each simulation. \apiname{}'s implementation of the MTS is simplified as well due to the absence of a distributed infrastructure considering that agent address resolution is unnecessary. The AMS contains a mapping of all AIDs to their respective Agents, which is used by the MTS when delivering messages.
+Our API implements the DF Agent Description used to filter DF searches. The focus of our tool is the development of local simulations (as opposed to distributed). As such, a single DF exists in each simulation. \apiname{}'s implementation of the MTS is simplified as well due to the absence of a distributed infrastructure considering that agent address resolution is unnecessary. The AMS contains a mapping of all AIDs to their respective agent objects, which is used by the MTS when delivering messages.
 % The ACL message in the api
 Our implementation of the ACL Message is slightly simpler than the one found in JADE, focusing on the most commonly used elements (the ones highlighted in Table \ref{tab:fipaACLMessage}).
 
@@ -76,7 +76,7 @@ The ``plug-in points'' of the API are the Agent, the Behaviour and their derived
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{figures/repacl_arch.pdf}
-	\caption{Detailed architecture of \apiname{}}
+	\caption{Detailed architecture of \apiname{}. The classes with doted border are internal.}
 	\label{fig:arch}
 \end{figure}
 
